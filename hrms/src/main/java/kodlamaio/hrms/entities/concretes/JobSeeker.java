@@ -1,7 +1,6 @@
 package kodlamaio.hrms.entities.concretes;
 
 
-import java.time.LocalDate;
 
 
 import javax.persistence.Column;
@@ -36,5 +35,5 @@ public class JobSeeker extends User{
 	private String identityNumber;
 	
 	@Column(name="date_of_birth")
-	private LocalDate dateOfBirth;
+	private int dateOfBirth;
 } 
