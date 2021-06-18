@@ -44,15 +44,6 @@ CREATE TABLE public.job_seekers
     PRIMARY KEY (user_id)
 );
 
-CREATE TABLE public.system_user_confirms
-(
-    id integer NOT NULL,
-    confirmed_date date,
-    is_confirmed boolean,
-    system_user_id integer,
-    PRIMARY KEY (id)
-);
-
 CREATE TABLE public.system_users
 (
     user_id integer NOT NULL,
@@ -108,12 +99,6 @@ ALTER TABLE public.employer_verifications
     NOT VALID;
 
 
-ALTER TABLE public.employer_verifications
-    ADD FOREIGN KEY (system_user_confirm_id)
-    REFERENCES public.system_user_confirms (id)
-    NOT VALID;
-
-
 ALTER TABLE public.employers
     ADD FOREIGN KEY (user_id)
     REFERENCES public.users (id)
@@ -135,12 +120,6 @@ ALTER TABLE public.job_seeker_verifications
 ALTER TABLE public.job_seekers
     ADD FOREIGN KEY (user_id)
     REFERENCES public.users (id)
-    NOT VALID;
-
-
-ALTER TABLE public.system_user_confirms
-    ADD FOREIGN KEY (system_user_id)
-    REFERENCES public.system_users (user_id)
     NOT VALID;
 
 
