@@ -13,7 +13,7 @@ public class Result {
 		this.message = message;
 	}
 
-	public boolean inSuccess() {
+	public boolean isSuccess() {
 		return this.success;
 	}
 
