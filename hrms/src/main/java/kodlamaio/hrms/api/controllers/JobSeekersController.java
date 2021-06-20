@@ -17,20 +17,23 @@ import kodlamaio.hrms.entities.concretes.JobSeeker;
 @RestController
 @RequestMapping("/api/jobseekers")
 public class JobSeekersController {
-	
+
 	private JobSeekerService jobSeekerService;
-	
+
 	@Autowired
 	public JobSeekersController(JobSeekerService jobSeekerService) {
 		super();
 		this.jobSeekerService = jobSeekerService;
 	}
+
 	@GetMapping("/getall")
-	public DataResult<List<JobSeeker>> getAll(){
-		return jobSeekerService.getAll();
+	public List<JobSeeker> getAll() {
+		return this.jobSeekerService.getAll();
 	}
-	@PostMapping("/add")
-	public Result add(@RequestBody JobSeeker jobSeeker) {
-		return jobSeekerService.add(jobSeeker);
+
+	@PostMapping("/register")
+	public Result register(@RequestBody JobSeeker jobSeeker, String passwordAgain) {
+		return this.jobSeekerService.register(jobSeeker, passwordAgain);
+
 	}
 }

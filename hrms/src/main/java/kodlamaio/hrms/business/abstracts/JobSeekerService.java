@@ -5,9 +5,10 @@ import java.util.List;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.JobSeeker;
-import kodlamaio.hrms.entities.dtos.JobSeekerForRegisterDto;
 
 public interface JobSeekerService {
-	  DataResult<List<JobSeeker>> getAll();
-	  Result add(JobSeeker jobSeeker);
+	Result register(JobSeeker jobSeeker, String passwordAgain);
+	  List<JobSeeker> getAll();
+	  List<String> getAllEmail();
+	  List<String> getAllIdentityNumber();
 }
