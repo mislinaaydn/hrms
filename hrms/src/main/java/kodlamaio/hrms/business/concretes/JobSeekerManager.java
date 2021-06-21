@@ -10,13 +10,9 @@ import com.google.common.base.Objects;
 
 import kodlamaio.hrms.business.abstracts.JobSeekerService;
 import kodlamaio.hrms.core.helpers.email.abstracts.CodeGeneratorService;
-import kodlamaio.hrms.core.helpers.email.abstracts.EmailCheckService;
-import kodlamaio.hrms.core.helpers.email.abstracts.EmailSendService;
 import kodlamaio.hrms.core.mernis.abstracts.MernisCheckService;
-import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.ErrorResult;
 import kodlamaio.hrms.core.utilities.results.Result;
-import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobSeekerDao;
 import kodlamaio.hrms.entities.concretes.JobSeeker;
