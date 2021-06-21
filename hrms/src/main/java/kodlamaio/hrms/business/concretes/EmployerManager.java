@@ -36,11 +36,7 @@ public class EmployerManager implements EmployerService{
 		return new SuccessResult(employer.getCompanyName() +" eklendi");
 	}
 
-	@Override
-	public Result update(Employer employer) {
-		employerDao.update(employer);
-		return new SuccessResult(employer.getCompanyName()+"güncellendi");
-	}
+	
 
 	@Override
 	public Result delete(Employer employer) {

@@ -11,11 +11,12 @@ import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobPositionDao;
+import kodlamaio.hrms.entities.concretes.Employer;
 import kodlamaio.hrms.entities.concretes.JobPosition;
 
 @Service
 public class JobPositionManager implements JobPositionService {
-	
+
 	private JobPositionDao jobPositionDao;
 
 	@Autowired
@@ -35,6 +36,12 @@ public class JobPositionManager implements JobPositionService {
 		this.jobPositionDao.save(jobPosition);
 		return new SuccessResult("iş alanı eklendi, Başarılı :)");
 
+	}
+
+	@Override
+	public Result delete(JobPosition jobPosition) {
+		this.jobPositionDao.delete(jobPosition);
+		return new SuccessResult(jobPosition.getPositionName()+"pozisyon silindi");
 	}
 
 }

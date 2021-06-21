@@ -4,10 +4,13 @@ import java.util.List;
 
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
+import kodlamaio.hrms.entities.concretes.Employer;
 import kodlamaio.hrms.entities.concretes.SystemUser;
 
 public interface SystemUserService{
 	DataResult< List<SystemUser> >  getAll();
 	Result add(SystemUser systemUser);
+
+	 Result delete(SystemUser systemUser);
 	
 }

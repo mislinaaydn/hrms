@@ -87,4 +87,16 @@ public class JobSeekerManager implements JobSeekerService {
 		return result;
 	}
 
+	@Override
+	public Result delete(JobSeeker jobSeeker) {
+		jobSeekerDao.delete(jobSeeker);
+		return new SuccessResult(jobSeeker.getIdentityNumber()+"tc kimlik numarasına göre silme işlemi gerçekleşti");
+	}
+
+		
+	
+
+
+	
+
 }

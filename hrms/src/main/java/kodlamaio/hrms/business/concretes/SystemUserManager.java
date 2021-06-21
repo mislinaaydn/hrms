@@ -11,6 +11,7 @@ import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.SystemUserDao;
+import kodlamaio.hrms.entities.concretes.Employer;
 import kodlamaio.hrms.entities.concretes.SystemUser;
 @Service
 public class SystemUserManager implements SystemUserService {
@@ -32,6 +33,15 @@ public class SystemUserManager implements SystemUserService {
 		systemUserDao.save(systemUser);
 		return new SuccessResult(systemUser.getFirstName() +" eklendi");
 	}
+
+	@Override
+	public Result delete(SystemUser systemUser) {
+		systemUserDao.delete(systemUser);
+		return new SuccessResult (systemUser.getFirstName()+"isime göre silme işlemi gerçekleşti");
+	
+
+	
 	}
 
 
+}

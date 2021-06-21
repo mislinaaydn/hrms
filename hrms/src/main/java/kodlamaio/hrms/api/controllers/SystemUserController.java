@@ -14,7 +14,7 @@ import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.entities.concretes.SystemUser;
 
 @RestController
-@RequestMapping("/api/systemuser")
+@RequestMapping("/api/system_user")
 public class SystemUserController {
 	private SystemUserService systemUserService;
 

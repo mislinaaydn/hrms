@@ -9,4 +9,6 @@ public interface JobSeekerService {
 	  List<JobSeeker> getAll();
 	  List<String> getAllEmail();
 	  List<String> getAllIdentityNumber();
+	
+		 Result delete(JobSeeker jobSeeker);
 }
